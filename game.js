@@ -14,7 +14,9 @@ console.log("Computer: " + computerChoice)
 
 var compare = function (choice1, choice2) {
     if (choice1 === choice2) {
-        return "The result is a tie!";
+        userChoice = prompt("It's a draw, please choose one more time");
+        computerChoice = Math.random();
+        return compare(userChoice, computerChoice);
         
     } else if (choice1 === "rock") {
         if (choice2 === "scissors") {
